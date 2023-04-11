@@ -1,11 +1,12 @@
 import './style/userProfile.css'
-import {useState} from 'react'
+import { useState } from 'react'
 
 const Input = (props) => {
   const [query, setQuery] = useState("")
+  
   const handleChange = (e) => {
-    const inputValue = e.target.value;
-    setQuery(inputValue);
+    const query = e.target.value
+    setQuery(query);
     props.handleChange(query)
   }
   return(
